@@ -1,0 +1,45 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "pickup_pincode": "body.collection_address.code",
+      "drop_pincode": "body.delivery_address.code"
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "collection_address": {
+        "type": "business",
+        "company": "uAfrica.com",
+        "street_address": "1188 Lois Avenue",
+        "local_area": "Menlyn",
+        "city": "Pretoria",
+        "zone": "Gauteng",
+        "country": "ZA",
+        "lat": -25.7863272,
+        "lng": 28.277583
+      },
+      "delivery_address": {
+        "type": "residential",
+        "company": "",
+        "street_address": "10 Midas Avenue",
+        "local_area": "Olympus AH",
+        "city": "Pretoria",
+        "zone": "Gauteng",
+        "country": "ZA",
+        "lat": -25.80665579999999,
+        "lng": 28.334732
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "url": "https://api.shiplogic.com",
+      "method": "POST",
+      "method_path": "/v2/rates/opt-in",
+      "bearer_token": "a601d99c75fc4c64b5a64288f97d52b4"
+    }
+  }
+]

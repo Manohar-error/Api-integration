@@ -1,0 +1,61 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "pickup_pincode": "collection_address.code",
+      "drop_pincode": "delivery_address.code",
+      "length": "parcels[0].submitted_length_cm",
+      "breadth": "parcels[0].submitted_width_cm",
+      "height": "parcels[0].submitted_height_cm",
+      "weight": "parcels[0].submitted_weight_kg",
+      "invoice_value": "declared_value"
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "collection_address": {
+        "type": "business",
+        "company": "uAfrica.com",
+        "street_address": "1188 Lois Avenue",
+        "local_area": "Menlyn",
+        "city": "Pretoria",
+        "zone": "Gauteng",
+        "country": "ZA",
+        "lat": -25.7863272,
+        "lng": 28.277583
+      },
+      "delivery_address": {
+        "type": "residential",
+        "company": "",
+        "street_address": "10 Midas Avenue",
+        "local_area": "Olympus AH",
+        "city": "Pretoria",
+        "zone": "Gauteng",
+        "country": "ZA",
+        "lat": -25.80665579999999,
+        "lng": 28.334732
+      },
+      "parcels": [
+        {
+          "submitted_length_cm": "=toDouble",
+          "submitted_width_cm": "=toDouble",
+          "submitted_height_cm": "=toDouble",
+          "submitted_weight_kg": "=toDouble"
+        }
+      ],
+      "declared_value": "=toInteger",
+      "collection_min_date": "2021-05-21",
+      "delivery_min_date": "2021-05-21"
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+     "url": "https://api.shiplogic.com",
+      "method": "POST",
+      "method_path": "/v2/rates",
+      "bearer_token": "a601d99c75fc4c64b5a64288f97d52b4"
+    }
+  }
+]
