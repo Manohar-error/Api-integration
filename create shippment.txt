@@ -1,0 +1,63 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "fromAddress;": {
+        "address_type": {
+          "RESIDENTIAL": {
+            "#business": "body.collection_address.type"
+          }
+        },
+        "company": "body.collection_address.company",
+        "addressLine1": "body.collection_address.street_address",
+        "district": "body.collection_address.local_area",
+        "city": "body.collection_address.city",
+        "postalCode": "body.collection_address.code",
+        "state": "body.collection_address.zone",
+        "country": "body.collection_address.country",
+        "lat": "body.collection_address.lat",
+        "long": "body.collection_address.lng",
+        "name": "body.collection_contact.name",
+        "phoneNumber": "body.collection_contact.mobile_number",
+        "emailAddress": "body.collection_contact.email"
+      },
+      "toAddress": {
+        "address_type": {
+          "RESIDENTIAL": {
+            "#business": "body.delivery_address.type"
+          }
+        },
+        "company": "body.delivery_address.company",
+        "addressLine1": "body.delivery_address.street_address",
+        "district": "body.delivery_address.local_area",
+        "city": "body.delivery_address.city",
+        "postalCode": "body.delivery_address.code",
+        "state": "body.delivery_address.zone",
+        "country": "body.delivery_address.country",
+        "lat": "body.delivery_address.lat",
+        "long": "body.delivery_address.lng",
+        "name": "body.delivery_contact.name",
+        "phoneNumber": "body.delivery_contact.mobile_number",
+        "emailAddress": "body.delivery_contact.email"
+      },
+      "shipment_details": {
+        "description": "body.parcels[0].parcel_description",
+        "length": "body.parcels[0].submitted_length_cm",
+        "width": "body.parcels[0].submitted_width_cm",
+        "height": "body.parcels[0].submitted_height_cm",
+        "weight": "body.parcels[0].submitted_weight_kg",
+        "cod_value": "body.service_level_code"
+      }
+    }
+    },
+
+  {
+    "operation": "default",
+    "spec": {
+      "url": "https://api.shiplogic.com",
+      "method": "POST",
+      "method_path": "/v2/shipments",
+      "bearer_token": "a601d99c75fc4c64b5a64288f97d52b4"
+    }
+}
+]
