@@ -1,0 +1,17 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "waybill": "parameters.tracking_reference"
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "base_url": "https://api.shiplogic.com",
+      "method": "GET",
+      "path": "/v2/shipments/cancel",
+      "Authorization": "Bearer a601d99c75fc4c64b5a64288f97d52b4"
+    }
+  }
+]
