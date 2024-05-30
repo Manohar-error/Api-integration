@@ -1,10 +1,19 @@
 [
   {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "height": "=toDouble",
+      "length": "=toDouble",
+      "weight": "=toDouble",
+      "breadth": "=toDouble"
+    }
+  },
+  {
     "operation": "shift",
     "spec": {
       "pickup_pincode": "body.collection_address.code",
       "drop_pincode": "body.delivery_address.code",
-      "length": "body.parcel[0].submitted_length_cm",
+      "length": "body.parcels[0].submitted_length_cm",
       "breadth": "body.parcels[0].submitted_width_cm",
       "height": "body.parcels[0].submitted_height_cm",
       "weight": "body.parcels[0].submitted_weight_kg"
