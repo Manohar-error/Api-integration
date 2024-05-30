@@ -1,5 +1,14 @@
 [
   {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "height": "=toDouble",
+      "length": "=toDouble",
+      "weight": "=toDouble",
+      "breadth": "=toDouble"
+    }
+  },
+  {
     "operation": "shift",
     "spec": {
       "fromAddress;": {
